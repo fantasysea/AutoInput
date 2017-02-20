@@ -1,0 +1,19 @@
+chrome.storage.sync.get({
+    producttitle: "gift box"
+	}, function(items) {
+		chrome.tabs.executeScript(null,
+			{code:"document.getElementsByClassName('requiredInput productName-count next-input next-input-single next-input-medium')[0].value = '"+items.favoriteColor+"'; "});
+			console.log('updateTitle');
+  });
+  
+  
+  chrome.storage.sync.get({
+    producttitle: "gift box"
+	}, function(items) {
+		chrome.tabs.executeScript(null,
+			{code:"document.getElementsByClassName('requiredInput productName-count next-input next-input-single next-input-medium')[0].value = '"+items.producttitle+"'; "});
+			console.log('updateTitle');
+  });
+  
+  
+  //chrome.storage.sync.set({producttitle: data}, function() {});

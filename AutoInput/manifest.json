@@ -1,0 +1,15 @@
+{
+  "name": "自动输入工具",
+  "description": "自动输入标题",
+  "version": "1.0",
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },  
+  "permissions": [  
+        "tabs", "http://*/*","https://*/*"  ,
+		"storage"
+  ],  
+  "background": { "scripts": ["jquery.min.js","background.js"] },
+  "manifest_version": 2
+}
